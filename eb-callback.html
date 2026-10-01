@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connecting…</title>
+<style>body{font:16px/1.6 system-ui,sans-serif;max-width:32rem;margin:4rem auto;padding:0 1rem;text-align:center}</style></head>
+<body>
+<h1>Connecting your bank…</h1>
+<p id="m">Returning you to the assistant on this Mac.</p>
+<p><a id="l" href="#">Continue</a></p>
+<script>
+  // Enable Banking requires an https redirect; this page just hands the one-time code
+  // back to the local assistant admin server running on this same Mac.
+  var dest = "http://127.0.0.1:8788/eb/callback" + window.location.search;
+  document.getElementById("l").href = dest;
+  location.replace(dest);
+</script>
+</body></html>
